@@ -11,7 +11,10 @@ def temp_here(request):
     location = geocoder.ip('me').latlng
     temp = get_temp(location)
     template = loader.get_template('index.html')
-    context = {'temp': temp}
+    context = {
+        'city': 'Your location',
+        'temp': temp,
+    }
     return HttpResponse(template.render(context, request))
 
 
