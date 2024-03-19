@@ -1,6 +1,6 @@
 from datetime import datetime
 
-import geocoder as geocoder
+import geocoder
 import requests
 from django.http import HttpResponse
 from django.template import loader
